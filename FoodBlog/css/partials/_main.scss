@@ -1,0 +1,127 @@
+h1, h3 {
+  font-family: $fontHeading;
+  text-align: center;
+}
+
+h2 {
+  font-family: $fontStack;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+span.heading {
+  font-family: $fontHeading;
+  font-size: 1.4rem;
+}
+
+.wrapper {
+  margin: 4rem auto;
+  max-width: 1400px;
+}
+
+#image-wrapper {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  @include changeCols(3,1fr);
+  gap: 1.5rem;
+  section {
+    position: relative;
+    text-align: center;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 1rem rgb(140, 139, 139);
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.caption {
+  z-index: 100;
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  /* gradients */
+  background: rgb(238,238,238); /* Old browsers */
+  background: -moz-linear-gradient(180deg,  rgba(238,238,238,0.4) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(180deg,  rgba(238,238,238,0.4) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(180deg,  rgba(238,238,238,0.4) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(180deg,  rgba(238,238,238,0.4) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
+  background: linear-gradient(180deg,  rgba(238,238,238,0.4) 0%,rgba(238,238,238,1) 100%); /* W3C */
+  font-size: 1.4rem;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.recipe-heading {
+  padding: 10vh;
+  color: rgb(237, 237, 237);
+  font-size: 5em;
+  background-color: $colorRed;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+  background-image: url("../assets/taco.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.about-heading {
+  @extend .recipe-heading;
+  background-image: url("../assets/dinner.jpg");
+}
+
+.faq-heading {
+  @extend .recipe-heading;
+  background-image: url("../assets/difficult.jpg");
+}
+
+ul, ol {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+li {
+  padding: 0.75rem;
+}
+
+.text {
+  margin: 4rem;
+  padding: 1rem;
+  text-align: justify;
+  line-height: 1.6rem;
+}
+
+.bg-wrapper {
+  @extend .wrapper;
+  color: white;
+  font-weight: bold;
+  background-color: $colorRed;
+  width: 50%;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.recipe-text {
+  width: 80%;
+  padding: 2rem;
+  margin: 4rem auto;
+  box-shadow: 0 0 1rem rgb(210, 208, 208);
+  border-radius: 6px;
+}

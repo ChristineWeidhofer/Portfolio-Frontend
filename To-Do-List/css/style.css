@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px; /* ~ height of fixed navbar - fixes overlapping on anchor links*/
+}
+
+body, html {
+  width: 100%;
+}
+/* -------------- Navigation ------------------- */
+.navbar {
+  box-shadow: 0px 2px 20px rgb(202, 202, 202);
+  z-index: 99;
+}
+
+/* animating the bell to the top right ;-) */
+
+.bell:hover {
+  animation: ring 4s .3s ease-in-out infinite;
+  transform-origin: 50% 4px;
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  1% { transform: rotate(30deg); }
+  3% { transform: rotate(-28deg); }
+  5% { transform: rotate(34deg); }
+  7% { transform: rotate(-32deg); }
+  9% { transform: rotate(30deg); }
+  11% { transform: rotate(-28deg); }
+  13% { transform: rotate(26deg); }
+  15% { transform: rotate(-24deg); }
+  17% { transform: rotate(22deg); }
+  19% { transform: rotate(-20deg); }
+  21% { transform: rotate(18deg); }
+  23% { transform: rotate(-16deg); }
+  25% { transform: rotate(14deg); }
+  27% { transform: rotate(-12deg); }
+  29% { transform: rotate(10deg); }
+  31% { transform: rotate(-8deg); }
+  33% { transform: rotate(6deg); }
+  35% { transform: rotate(-4deg); }
+  37% { transform: rotate(2deg); }
+  39% { transform: rotate(-1deg); }
+  41% { transform: rotate(1deg); }
+
+  43% { transform: rotate(0); }
+  100% { transform: rotate(0); }
+}
+
+/* -------------- Hero Section ------------------- */
+
+.hero img {
+  height: 400px; /* height changes for different screen sizes (see @media queries at bottom )*/
+  object-fit: cover;
+  object-position: top;
+}
+
+/* -------------- Main Content ------------------- */
+
+#taskContainer {
+  width: 75%;
+  margin: 3rem auto;
+}
+
+.card {
+  box-shadow: 0px 0px 10px rgb(202, 202, 202);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.icons-end {
+  padding-left: 0.5rem; /* btn icons get a left padding after the text that came before*/
+}
+
+.icons-start {
+  padding-right: 0.5rem; /* icons get a right padding before the text that comes after OR if they are right-aligned*/
+}
+
+/* icon for sorting the tasks */
+
+.bi-sort-up {
+  display: inline-block; /* to be able to give a padding to the span */
+  padding: 0 0.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.bi-sort-up:hover {
+  color: #FEB900;
+  background: #1e2123;
+}
+
+/* span of priority */
+
+.prio {
+  display: inline-block; /* to be able to give a padding to the span*/
+  padding: 0 0.4rem;
+  border-radius: 0.4rem;
+  background-color: green; /* default green color of the bg */
+}
+
+/* scroll to top */
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 1.3rem;
+}
+
+/* -------------- Media Queries ------------------- */
+
+@media screen and (max-width: 767px) {
+  .hero img {
+    padding-top: 50px;
+    height: 250px;
+  }
+  #taskContainer {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .card img {
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hero img {
+    padding-top: 50px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .bell {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .hero img {
+    height: 550px;
+  }
+}
