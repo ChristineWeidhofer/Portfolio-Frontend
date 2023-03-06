@@ -1,4 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: #212529;
+  color: white;
+}
+
+/* .main-content {
+  padding: 0;
+} */
+
+.sidebar > a {
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  padding-left: 2rem;
+}
+
+/* text in cards should always be black*/
+.text-wrapper {
+  color: black;
+}
+
+.light-mode {
+  background: white;
+  color:#212529;
+}
+
+/* scroll to top */
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 1.3rem;
+  transition: all 0.2s linear;
+}
+
+#btn-back-to-top:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  position: relative;
+}
+
+.nav-link {
+  transition: all 0.2s linear;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.hover-glow:hover {
+  text-shadow: 0px 0px 15px #FFCA2B;
+}
+
+.btn-light-mode {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+}
+
+.btn-light-mode:hover {
+  box-shadow: 0px 0px 15px #FFCA2B;
+}
+
+@media screen and (max-width: 991px) {
+  .btn-light-mode {
+    right: 15%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .bi-code-slash {
+    font-size: 25rem;
+  }
+}
+
+/* media queries */
 @media screen and (max-width: 800px) {
   .card {
     width: 36rem;
