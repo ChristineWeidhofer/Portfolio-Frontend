@@ -109,6 +109,10 @@ body, html {
   background-color: green; /* default green color of the bg */
 }
 
+.legend button {
+  cursor: default;
+}
+
 /* scroll to top */
 
 #btn-back-to-top {
