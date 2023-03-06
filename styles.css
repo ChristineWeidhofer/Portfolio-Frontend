@@ -14,14 +14,32 @@ body, html {
   color: white;
 }
 
-/* .main-content {
-  padding: 0;
-} */
-
-.sidebar > a {
+.sidebar a {
   text-decoration: none;
   writing-mode: vertical-lr;
-  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.sidebar {
+  position: relative;
+}
+
+/* sidebar-wrapper fixed */
+.fixed-wrapper {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+}
+
+.about-wrapper li {
+  list-style-type: none;
+  cursor: default;
+}
+.avatar {
+  height: 50vh;
+  background-image: url("assets/avatar2.svg");
+  background-size: cover;
+  background-position: top;
 }
 
 /* text in cards should always be black*/
@@ -38,10 +56,10 @@ body, html {
 
 #btn-back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.5rem;
+  right: 1.5rem;
   display: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   transition: all 0.2s linear;
 }
 
