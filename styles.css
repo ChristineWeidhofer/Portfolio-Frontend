@@ -72,6 +72,7 @@ body, html {
 
 .about-text {
   width: 85%;
+  text-align: justify;
 }
 
 /* Flip Card Styles */
