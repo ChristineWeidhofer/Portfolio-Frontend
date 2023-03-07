@@ -32,5 +32,15 @@ function lightMode() {
   element.classList.toggle("light-mode");
 }
 
-sel = document.getElementById("btn-light-mode");
+const sel = document.getElementById("btn-light-mode");
 sel.addEventListener("click", lightMode);
+
+// swing the contact button
+
+const swingBtn = document.getElementById("swing");
+
+function mouseOver() {
+  swingBtn.classList.add("animate__animated animate__swing");
+}
+
+swingBtn.addEventListener("mouseover", mouseOver);
