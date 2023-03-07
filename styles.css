@@ -14,10 +14,38 @@ body, html {
   color: white;
 }
 
+/* navigation area */
+.navbar {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.navbar-brand {
+  font-size: 40px;
+}
+
+.nav-link {
+  transition: all 0.2s linear;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.btn-light-mode {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.2rem;
+}
+
+.btn-light-mode:hover {
+  box-shadow: 0px 0px 15px #FFCA2B;
+}
+
 .sidebar a {
   text-decoration: none;
   writing-mode: vertical-lr;
-  margin-left: 1rem;
+  margin-left: 1.3rem;
 }
 
 .sidebar {
@@ -27,7 +55,7 @@ body, html {
 /* sidebar-wrapper fixed */
 .fixed-wrapper {
   position: fixed;
-  top: 20vh;
+  top: 18vh;
   left: 0;
 }
 
@@ -112,29 +140,6 @@ body, html {
 
 #btn-back-to-top:hover {
   transform: scale(1.1);
-}
-
-/* navigation area */
-.navbar {
-  position: relative;
-}
-
-.nav-link {
-  transition: all 0.2s linear;
-}
-
-.nav-link:hover {
-  transform: scale(1.1);
-}
-
-.btn-light-mode {
-  position: absolute;
-  right: 1.5rem;
-  top: 1.2rem;
-}
-
-.btn-light-mode:hover {
-  box-shadow: 0px 0px 15px #FFCA2B;
 }
 
 /* footer */
