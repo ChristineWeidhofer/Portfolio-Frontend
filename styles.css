@@ -42,6 +42,10 @@ body, html {
   background-position: top;
 }
 
+.about-text {
+  width: 85%;
+}
+
 /* Flip Card Styles */
 
 .flip-card {
@@ -74,7 +78,7 @@ body, html {
 }
 
 .flip-card-front {
-  background-color: white;
+  background-color: transparent;
   color: black;
 }
 
@@ -147,6 +151,9 @@ body, html {
   }
   .sidebar {
     display: none;
+  }
+  .about-text {
+    width: 100%;
   }
 }
 
