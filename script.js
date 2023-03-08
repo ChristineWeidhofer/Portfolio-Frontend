@@ -40,7 +40,13 @@ sel.addEventListener("click", lightMode);
 const swingBtn = document.getElementById("swing");
 
 function mouseOver() {
-  swingBtn.classList.add("animate__animated animate__swing");
+  swingBtn.setAttribute("class", "btn btn-lg btn-secondary text-warning mt-4 mt-sm-0 animate__animated animate__swing");
 }
 
 swingBtn.addEventListener("mouseover", mouseOver);
+
+function mouseOut() {
+  swingBtn.setAttribute("class", "btn btn-lg btn-secondary text-warning mt-4 mt-sm-0");
+}
+
+swingBtn.addEventListener("mouseout", mouseOut);
