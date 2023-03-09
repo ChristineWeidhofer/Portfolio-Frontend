@@ -143,6 +143,10 @@ body, html {
   transform: scale(1.1);
 }
 
+.contact-wrapper {
+  width: 60%;
+}
+
 /* footer */
 .footer-text:hover {
   color: #FFCA2B;
@@ -159,6 +163,9 @@ body, html {
     display: none;
   }
   .about-text {
+    width: 100%;
+  }
+  .contact-wrapper {
     width: 100%;
   }
 }
