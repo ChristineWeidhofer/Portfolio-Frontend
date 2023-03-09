@@ -96,6 +96,7 @@ body, html {
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -109,12 +110,15 @@ body, html {
 .flip-card-front {
   background-color: transparent;
   color: black;
+  transform: translateZ(1px);
+  -webkit-transform: translateZ(1px);
 }
 
 .flip-card-back {
   background-color: #FFCA2B;
   color: black;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
+  -webkit-transform: rotateY(180deg) translateZ(1px);
 }
 
 
