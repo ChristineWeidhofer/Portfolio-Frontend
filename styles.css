@@ -179,3 +179,7 @@ body, html {
 .opa {
   opacity: 0.8;
 }
+
+.main-wrapper {
+  max-width: 1600px;
+}
