@@ -50,3 +50,18 @@ function mouseOut() {
 }
 
 swingBtn.addEventListener("mouseout", mouseOut);
+
+//---------------- e-mail ------------------------- //
+
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let msg = document.getElementById("msg").value;
+
+  let http = new XMLHttpRequest();
+  let params = `name=${name}&email=${email}&msg=${msg}`;
+  http.open("GET", `email.php?${params}`);
+
+  http.send(params);
+})
